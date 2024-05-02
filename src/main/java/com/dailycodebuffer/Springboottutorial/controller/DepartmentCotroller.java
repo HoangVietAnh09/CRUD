@@ -5,28 +5,28 @@ import com.dailycodebuffer.Springboottutorial.entity.Department;
 import com.dailycodebuffer.Springboottutorial.service.DepartmentService;
 import com.dailycodebuffer.Springboottutorial.service.DepartmentServiceImpl;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 public class DepartmentCotroller {
     @Autowired
     private DepartmentService departmentService;
 
-//    private final Logger logger = LoggerFactory.getLogger(DepartmentCotroller.class);
+    private final Logger logger =  LoggerFactory.getLogger(DepartmentCotroller.class);
 
     @PostMapping("/departments")
     public Department saveDepartment(@Valid @RequestBody Department department){
-//        logger.info("Inside saveDepartment");
+        logger.info("Inside saveDepartment");
         return departmentService.saveDepartment(department);
     }
     @GetMapping("/departments")
     public List<Department> fetchDepartmentList(){
-//        logger.info("Inside saveDepartment list");
+        logger.info("Inside saveDepartment list");
         return departmentService.fetchDepartmentsList();
     }
 

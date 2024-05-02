@@ -22,14 +22,6 @@ public class Department {
     private Long departmentID;
 
     @NotBlank(message = "Please add department name")
-//    @Length(max = 5, min = 1)
-//    @Size(max = 10, min = 0)
-//    @Email
-//    @Positive
-//    @Negative
-//    @PositiveOrZero
-//    @NegativeOrZero
-
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
