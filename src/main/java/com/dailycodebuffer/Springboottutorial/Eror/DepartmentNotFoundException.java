@@ -1,5 +1,9 @@
 package com.dailycodebuffer.Springboottutorial.Eror;
 
+
+import lombok.Getter;
+
+
 public class DepartmentNotFoundException extends Exception{
     public DepartmentNotFoundException() {
         super();
@@ -19,5 +23,10 @@ public class DepartmentNotFoundException extends Exception{
 
     protected DepartmentNotFoundException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+
+    public String getMassage() {
+        return "Not Found";
     }
 }
